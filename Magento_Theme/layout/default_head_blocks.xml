@@ -2,5 +2,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="css/theme.css"/>
+        <css src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" src_type="url"/>
+        <css src="https://fonts.googleapis.com/css?family=Exo+2:300,500,600|Open+Sans:400,700" src_type="url"/>
+        <css src="https://use.fontawesome.com/releases/v5.6.3/css/all.css" src_type="url"/>
+        <remove src="css/styles-m.css"/>
+        <remove src="css/styles-l.css"/>
     </head>
 </page>

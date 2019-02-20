@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+    This layout is based on the Magento standard 1column.xml.
+    The theme is only valid for a null store, and so has no store sidebars;
+    thus, the other layouts inherit this exactly.
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="empty"/>
+    <referenceContainer name="page.wrapper">
+        <container name="frontpage.header" as="frontpage_header" label="Page Header Container" before="main.content"    htmlTag="header" htmlClass="page-header" />
+        <container name="frontpage.top"    as="frontpage_top"    label="After Page Header"     after="frontpage.header"/>
+        <container name="frontpage.footer" as="frontpage_footer" label="Page Footer Container" before="before.body.end" htmlTag="footer" htmlClass="page-footer"/>
+    </referenceContainer>
+</layout>
