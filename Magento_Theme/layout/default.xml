@@ -20,8 +20,8 @@
                         </arguments>
                     </block>
                 </container>
-                <!-- TODO: Arbitrary links block -->
-                <block class="Magento\Framework\View\Element\Template" name="frontpage.header.dropdown" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block>
+                <block class="Baze\FrontpageComponents\Block\Segment\Links" name="frontpage.header.links" template="Baze_FrontpageComponents::segment/links.phtml"></block>
+                <!-- <block class="Magento\Framework\View\Element\Template" name="frontpage.header.dropdown" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block> -->
             </container>
             <!-- Hidden header clone - preserves document flow -->
             <container name="frontpage.header.wrapper_duplicate" htmlClass="hidden header flex wrap" htmlTag="div">
@@ -32,8 +32,8 @@
                         </arguments>
                     </block>
                 </container>
-                <!-- TODO: Arbitrary links block -->
-                <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block>
+                <block class="Baze\FrontpageComponents\Block\Segment\Links" template="Baze_FrontpageComponents::segment/links.phtml"></block>
+                <!-- <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block> -->
             </container>
         </referenceContainer>
         <referenceContainer name="frontpage.top"></referenceContainer>
