@@ -1,10 +1,14 @@
 .header {
-    padding: 30px;
+    @import (multiple) "__variables.less"; //@header-height
+    @font-size: 28px;
+
     justify-content: flex-end;
     width: 100%;
     z-index: 1;
-    font-size: 28px;
+    height: @header-height;
+    font-size: @font-size;
     font-weight: 300;
+    padding: (@header-height - (1.5 * @font-size)) / 2;
 }
 .sticky.header {
     position: fixed;

@@ -12,7 +12,7 @@
           -->
         <referenceContainer name="frontpage.header">
             <!-- Sticky header -->
-            <container name="frontpage.header.wrapper" htmlClass="sticky header dark frame flex wrap" htmlTag="div">
+            <container name="frontpage.header.wrapper" htmlClass="sticky header dark frame flex" htmlTag="div">
                 <container name="frontpage.header.logo" htmlTag="div" htmlClass="flexible item left">
                     <block class="Magento\Theme\Block\Html\Header\Logo">
                         <arguments>
@@ -21,10 +21,10 @@
                     </block>
                 </container>
                 <block class="Baze\FrontpageComponents\Block\Segment\Links" name="frontpage.header.links" template="Baze_FrontpageComponents::segment/links.phtml"></block>
-                <!-- <block class="Magento\Framework\View\Element\Template" name="frontpage.header.dropdown" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block> -->
+                <block class="Magento\Framework\View\Element\Template" name="frontpage.header.dropdown" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block>
             </container>
             <!-- Hidden header clone - preserves document flow -->
-            <container name="frontpage.header.wrapper_duplicate" htmlClass="hidden header flex wrap" htmlTag="div">
+            <container name="frontpage.header.wrapper_duplicate" htmlClass="invisible header flex" htmlTag="div">
                 <container htmlTag="div" htmlClass="flexible item left">
                     <block class="Magento\Theme\Block\Html\Header\Logo">
                         <arguments>
@@ -33,7 +33,7 @@
                     </block>
                 </container>
                 <block class="Baze\FrontpageComponents\Block\Segment\Links" template="Baze_FrontpageComponents::segment/links.phtml"></block>
-                <!-- <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block> -->
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/frontpage/header_dropdown.phtml"></block>
             </container>
         </referenceContainer>
         <referenceContainer name="frontpage.top"></referenceContainer>
