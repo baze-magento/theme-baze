@@ -38,16 +38,16 @@
         </referenceContainer>
         <referenceContainer name="frontpage.top"></referenceContainer>
         <referenceContainer name="frontpage.footer">
-            <container name="frontpage.footer.wrapper" htmlTag="div" htmlClass="small dark frame" htmlId="contact">
+            <container name="frontpage.footer.wrapper" htmlTag="div" htmlClass="small dark frame flex flex-column flex-lg-row justify-content-center align-items-center" htmlId="contact">
+				<container name="frontpage.footer.logo" htmlTag="div" htmlClass="growable logo flex align-self-center align-self-lg-end">
+					<block class="Magento\Theme\Block\Html\Header\Logo">
+						<arguments>
+							<argument name="show_nav_toggle" xsi:type="boolean">false</argument>
+						</arguments>
+					</block>
+				</container>
                 <block class="Magento\Framework\View\Element\Template" name="frontpage.footer.locations" template="Magento_Theme::html/frontpage/footer_locations.phtml"></block>
-                <container name="frontpage.footer.links.wrapper" htmlTag="div" htmlClass="flex wrap">
-                    <container name="frontpage.footer.logo" htmlTag="div" htmlClass="growable logo">
-                        <block class="Magento\Theme\Block\Html\Header\Logo">
-                            <arguments>
-                                <argument name="show_nav_toggle" xsi:type="boolean">false</argument>
-                            </arguments>
-                        </block>
-                    </container>
+                <container name="frontpage.footer.links.wrapper" htmlTag="div" htmlClass="flex justify-content-center align-self-center align-self-lg-end">
                     <block class="Magento\Framework\View\Element\Template" name="frontpage.footer.links" template="Magento_Theme::html/frontpage/footer_links.phtml"></block>
                 </container>
             </container>
