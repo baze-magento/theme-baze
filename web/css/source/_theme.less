@@ -8,8 +8,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
 }
-h1, h2, h3, h4, h5, h6, header, .head {
-    font-family: 'Exo 2', sans-serif;
+body { //Bootstrap has a font-family rule for h1-h6, which we supersede by prepending 'body'
+    h1, h2, h3, h4, h5, h6, header {
+        font-family: 'Exo 2', sans-serif;
+    }
 }
 * {
     box-sizing: border-box;
@@ -51,17 +53,17 @@ body a, body a:hover, body a:visited {
     padding-right: 10%;
 }
 
-/* Main content */
+/* Frame display */
 .frame {
     position: relative;
-}
-.frame.small {
-    min-height: 100px;
 }
 .frame.large {
     min-height: 1000px;
 	padding-top: 60px;
-	text-align: center;
+}
+.frame.fullscreen {
+    @import (multiple) "__variables.less"; //@header-height
+    height: calc(100vh ~"-" @header-height); //escape the minus to keep LESS from pre-compiling the values
 }
 
 .frame.light {
@@ -79,34 +81,50 @@ body a, body a:hover, body a:visited {
     background: #444444;
 }
 
-.flex {
-    display: -webkit-flex; /* Safari */
-    display: flex;
-}
-.flex.wrap {
-    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-    flex-wrap: wrap;
+// Frame width responsiveness: 70% width containers, snapping to breakpoints.
+// Use .container-fluid to get full width.
+
+@import (multiple) "__media.less";
+.frame > .container {
+    max-width: 70%;
+    @media @sm-and-up {
+        max-width: 404px;
+    }
+    @media @md-and-up {
+        max-width: 538px;
+    }
+    @media @lg-and-up {
+        max-width: 694px;
+    }
+    @media @xl-and-up {
+        max-width: 840px;
+    }
 }
 
-.flex > .flexible, 
-.flex.all > * {
-    flex: auto;
+// Bootstrap no-gutter styles. Useful for preventing margin overlap on font-icons.
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
 }
-.flex > .growable {
-    flex: 1 0;
-}
-.flex > .shrinkable {
-    flex: auto 0;
-}
+
 
 .orange {
     color: #FF8B00;
 }
-.left {
+.text-left {
     text-align: left;
 }
-.right {
+.text-right {
     text-align: right;
+}
+.text-center {
+    text-align: center;
 }
 .head {
     font-size: 48px;
@@ -133,8 +151,4 @@ body a, body a:hover, body a:visited {
 .logo img {
     max-width: 160px;
     max-height: 32px;
-}
-
-.hidden {
-    visibility: hidden;
 }
